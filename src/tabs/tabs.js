@@ -73,7 +73,6 @@ export default class Tabs extends React.Component<
     // $FlowFixMe: Cannot get this.activeTabRef.current.ref because property ref is missing in statics of TabComponent
     if (this.activeTabRef.current && this.activeTabRef.current.ref.current) {
       const el = this.activeTabRef.current.ref.current;
-      // Immediately scroll the selected Tab into view.
       if (el.scrollIntoView && typeof el.scrollIntoView === 'function') {
         el.scrollIntoView(
           smooth
